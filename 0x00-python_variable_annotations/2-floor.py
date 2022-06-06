@@ -14,12 +14,6 @@ def floor(n: float) -> int:
     Returns
     -------
     int
-        floor
+        number
     """
-    nStr = str(n)
-    if int(nStr[0]) > 0:
-        n = int(nStr[0])
-    else:
-        n = int(nStr[0] + -1)
-
-    return n
+    return int(n)
