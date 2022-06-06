@@ -3,7 +3,7 @@ import math
 """2. Basic annotations - floor"""
 
 
-def floor(n: float) -> float:
+def floor(n: float) -> int:
     """Takes a float n as an argument and
     returns the floor of the float.
 
