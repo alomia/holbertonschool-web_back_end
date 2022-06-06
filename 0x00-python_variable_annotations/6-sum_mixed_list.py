@@ -19,7 +19,7 @@ def sum_mixed_list(mxd_lst: List) -> float:
     float
         sum of floating numbers and integers
     """
-    sum: float = 0
+    sum = 0
 
     for num in mxd_lst:
         sum += num
