@@ -2,8 +2,8 @@
 """6. Complex types - mixed list"""
 
 
-from typing import List
 import typing
+from typing import List
 
 
 def sum_mixed_list(mxd_lst: List[typing.Union[int, float]]) -> float:
