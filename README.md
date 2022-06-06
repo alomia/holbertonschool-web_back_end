@@ -1,1 +1,1 @@
-# Holbertonschool Web Back End
+# Holberton School Web Back End
