@@ -3,9 +3,10 @@
 
 
 from typing import List
+import typing
 
 
-def sum_mixed_list(mxd_lst: List[float, int]) -> float:
+def sum_mixed_list(mxd_lst: List[typing.Union[int, float]]) -> float:
     """It takes a list of floats and integers as an argument
     and returns their sum as a float.
 
