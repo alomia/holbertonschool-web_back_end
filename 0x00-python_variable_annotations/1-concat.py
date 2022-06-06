@@ -18,4 +18,4 @@ def concat(str1: str, str2: str) -> str:
     str
         concatenated string
     """
-    return f"{str1} {str2}"
+    return f"{str1}{str2}"
