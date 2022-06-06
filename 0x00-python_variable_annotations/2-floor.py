@@ -1,4 +1,5 @@
 #!/usr/bin/env python3
+import math
 """2. Basic annotations - floor"""
 
 
@@ -16,5 +17,4 @@ def floor(n: float) -> int:
     int
         floor
     """
-    aux = str(n)
-    return int(aux[0])
+    return int(math.floor(n))
