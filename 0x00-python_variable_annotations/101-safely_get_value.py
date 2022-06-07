@@ -5,22 +5,20 @@
 from typing import Any, Mapping, TypeVar, Union
 
 
-def safely_get_value(dct: Mapping, key: Any, default: Union[TypeVar('T'), None] = None) -> Union[Any, TypeVar('T')]:
+def safely_get_value(dct: Mapping, key: Any,
+                     default: Union[TypeVar('T'), None] = None) -> Union[Any, TypeVar('T')]:
     """Given the parameters and the return values
 
     Parameters
     ----------
     dct : Mapping
-        Mapping
     key : Any
-        Any
     default: Union[TypeVar('T'), None] = None
-        Union[TypeVar('T'), None]
 
     Returns
     -------
     Mapping
-        Union[Any, TypeVar('T')]
+        Union[Any, TypeVar('T')] value in key position of dictionary
     """
     if key in dct:
         return dct[key]
