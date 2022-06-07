@@ -2,7 +2,6 @@
 """7. Complex types - string and int/float to tuple"""
 
 
-from turtle import st
 from typing import Union
 from typing import Tuple
 
