@@ -5,13 +5,13 @@
 from typing import Iterable, List, Sequence, Tuple
 
 
-def element_length(lst: Iterable[Sequence]) -> List[Tuple[Sequence]]:
-    """Take an argument and return a function that multiplies
-    a float by the argument.
+def element_length(lst: Iterable[Sequence]) -> List[Tuple[Sequence, int]]:
+    """Returns elements of the list with its length
 
     Parameters
     ----------
     lst : Iterable[Sequence]
+        List
 
     Returns
     -------
