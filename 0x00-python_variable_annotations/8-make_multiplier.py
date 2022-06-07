@@ -6,7 +6,8 @@ from typing import Callable
 
 
 def make_multiplier(multiplier: float) -> Callable[[float], float]:
-    """Take an argument and return a function that multiplies a float by the argument.
+    """Take an argument and return a function that multiplies
+    a float by the argument.
 
     Parameters
     ----------
@@ -16,7 +17,8 @@ def make_multiplier(multiplier: float) -> Callable[[float], float]:
     Returns
     -------
     float
-        returns a function that multiplies a float by the multiplier.
+        returns a function that multiplies
+        a float by the multiplier.
     """
 
     return lambda x: x * multiplier
