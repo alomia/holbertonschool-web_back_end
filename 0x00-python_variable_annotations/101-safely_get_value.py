@@ -2,7 +2,7 @@
 """10. Duck typing - first element of a sequence"""
 
 
-from typing import Any, Dict, Mapping, Sequence, TypeVar, Union
+from typing import Any, Mapping, TypeVar, Union
 
 
 def safely_get_value(dct: Mapping, key: Any, default: Union[TypeVar('T'), None] = None) -> Union[Any, TypeVar('T')]:
