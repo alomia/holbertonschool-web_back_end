@@ -11,8 +11,11 @@ def safely_get_value(dct: Mapping, key: Any, default: Union[TypeVar('T'), None] 
     Parameters
     ----------
     dct : Mapping
+        Mapping
     key : Any
+        Any
     default: Union[TypeVar('T'), None] = None
+        Union[TypeVar('T'), None]
 
     Returns
     -------
