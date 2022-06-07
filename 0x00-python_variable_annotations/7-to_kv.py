@@ -2,11 +2,12 @@
 """7. Complex types - string and int/float to tuple"""
 
 
+from turtle import st
 from typing import Union
 from typing import Tuple
 
 
-def to_kv(k: str, v: Union[int, float]) -> Tuple:
+def to_kv(k: str, v: Union[int, float]) -> Tuple[str, float]:
     """It takes two arguments, a string and a number, integer or float,
     and returns a tuple.
 
