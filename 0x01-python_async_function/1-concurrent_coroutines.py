@@ -9,7 +9,7 @@ from typing import List
 wait_random = __import__('0-basic_async_syntax').wait_random
 
 
-async def wait_n(n: int, max_delay: int) -> List:
+async def wait_n(n: int, max_delay: int) -> List[float]:
     """Takes two arguments and will generate
     wait_random n times with max_delay argument
     and returns a list in ascending order.
@@ -26,7 +26,5 @@ async def wait_n(n: int, max_delay: int) -> List:
     random_delay : List
         list of float numbers
     """
-    list_delay: List[float] = []
-    for count in range(n):
-        list_delay.append(await wait_random(max_delay))
-    return sorted(list_delay)
+    tasks = [asyncio.create_task(wait_random(max_delay)) for _ in range(n)]
+    return [await task for task in asyncio.as_completed(tasks)]
