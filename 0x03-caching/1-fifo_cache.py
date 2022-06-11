@@ -1,11 +1,12 @@
 #!/usr/bin/env python3
-"""0. Basic dictionary"""
+"""1. FIFO caching"""
 
 
 from base_caching import BaseCaching
 
 
 class FIFOCache(BaseCaching):
+    """Represents a type of system cache:"""
 
     def __init__(self):
         super().__init__()
