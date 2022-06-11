@@ -13,12 +13,34 @@ class BasicCache(BaseCaching):
 
     def put(self, key, item):
         """Must assign to the dictionary self.cache_data
-        the item value for the key key."""
-        if key is not None or item is not None:
+        the item value for the key key.
+
+        Parameters
+        ----------
+        key
+            key representing a value
+        item
+            value to assign to a key
+
+        Returns
+        -------
+        self.cache_data[key] or None
+        """
+        if key and item:
             self.cache_data[key] = item
 
     def get(self, key):
-        """Must return the value in self.cache_data linked to key."""
-        if key is None or key not in self.cache_data:
+        """Must return the value in self.cache_data linked to key.
+
+        Parameters
+        ----------
+        key
+            value to look up in the dictionary
+
+        Returns
+        -------
+        self.cache_data[key] or None
+        """
+        if not key or key not in self.cache_data:
             return None
         return self.cache_data[key]
