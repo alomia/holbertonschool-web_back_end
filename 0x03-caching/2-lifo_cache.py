@@ -30,7 +30,7 @@ class LIFOCache(BaseCaching):
             self.cache_data[key] = item
 
         if len(self.cache_data) > self.MAX_ITEMS:
-            key_deleted = list(self.cache_data.keys())[-1]
+            key_deleted = list(self.cache_data.keys())[-2]
             del self.cache_data[key_deleted]
             print(f"DISCARD: {key_deleted}")
 
