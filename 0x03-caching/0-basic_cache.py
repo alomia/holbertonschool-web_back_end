@@ -6,7 +6,7 @@ from base_caching import BaseCaching
 
 
 class BasicCache(BaseCaching):
-    """Representa una clase básica que genera un caché."""
+    """Represents a basic class that generates a cache.""""
 
     def __init__(self):
         super().__init__()
