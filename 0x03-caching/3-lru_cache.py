@@ -10,6 +10,7 @@ class LRUCache(BaseCaching):
 
     def __init__(self):
         super().__init__()
+        self.list_key = []
 
     def put(self, key, item):
         """Must assign to the dictionary self.cache_data
@@ -26,13 +27,16 @@ class LRUCache(BaseCaching):
         -------
         self.cache_data[key] or None
         """
-        if key and item:
-            self.cache_data[key] = item
-
-        if len(self.cache_data) > self.MAX_ITEMS:
-            key_deleted = list(self.cache_data.keys())[0]
+        if len(self.cache_data) == self.MAX_ITEMS and key not in self.list_key:
+            key_deleted = self.list_key.pop(0)
             del self.cache_data[key_deleted]
             print(f"DISCARD: {key_deleted}")
+
+        if key and item:
+            if key not in self.list_key:
+                self.list_key.append(key)
+            self.list_key.append(key)
+            self.cache_data[key] = item
 
     def get(self, key):
         """Must return the value in self.cache_data linked to key.
@@ -48,4 +52,6 @@ class LRUCache(BaseCaching):
         """
         if not key or key not in self.cache_data:
             return None
+        self.list_key.remove(key)
+        self.list_key.append(key)
         return self.cache_data[key]
