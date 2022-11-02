@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
-"""Cache Module"""
-
+"""Cache module
+"""
 import redis
 import uuid
 
@@ -22,6 +22,6 @@ class Cache:
         Args:
             data (str): [STRING]
         """
-        key: str = str(uuid.uuid4())
+        key: str = uuid.uuid4()
         self._redis[key] = data
         return key
