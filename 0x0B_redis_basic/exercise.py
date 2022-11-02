@@ -17,7 +17,8 @@ class Cache:
 
     def store(self, data: str) -> str:
         """This method takes a string as an argument, generates a random key,
-            stores the input data in Redis using the random key and returns the key.
+            stores the input data in Redis using the random key and returns the
+            key.
         Args:
             data (str): [STRING]
         """
