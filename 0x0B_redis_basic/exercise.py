@@ -22,6 +22,6 @@ class Cache:
         Args:
             data (str): [STRING]
         """
-        key: str = uuid.uuid4()
+        key = str(uuid.uuid4())
         self._redis[key] = data
         return key
