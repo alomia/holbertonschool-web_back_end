@@ -12,7 +12,7 @@ class Cache:
 
     """
     def __init__(self):
-        self._redis = redis.Redis()
+        self._redis = redis.Redis(host="localhost", port=6379)
         self._redis.flushdb()
 
     def store(self, data: str) -> str:
@@ -22,6 +22,5 @@ class Cache:
             data (str): [STRING]
         """
         key: str = str(uuid.uuid4())
-        r = redis.Redis(host="localhost", port=6379, db=0)
-        r.set(key, data)
+        self._redis[key] = data
         return key
