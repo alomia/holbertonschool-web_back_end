@@ -3,6 +3,7 @@
 """
 import redis
 import uuid
+from typing import Union
 
 
 class Cache:
@@ -15,10 +16,10 @@ class Cache:
         self._redis = redis.Redis(host="localhost", port=6379)
         self._redis.flushdb()
 
-    def store(self, data: str) -> str:
-        """This method takes a string as an argument, generates a random key,
-            stores the input data in Redis using the random key and returns the
-            key.
+    def store(self, data: Union[str, bytes, int, float]) -> str:
+        """It stores any type of data in redis,
+        generates a random key and returns it.
+
         Args:
             data (str): [STRING]
         """
