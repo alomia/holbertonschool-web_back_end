@@ -10,7 +10,6 @@ class Cache:
     """This class represents a cache object in redis
 
     Attributes:
-
     """
     def __init__(self):
         self._redis = redis.Redis(host="localhost", port=6379)
@@ -26,3 +25,7 @@ class Cache:
         key = str(uuid.uuid4())
         self._redis[key] = data
         return key
+
+    def get(self, key: str):
+        pass
+
