@@ -1,0 +1,7 @@
+version: "3.9"
+services:
+  mongo_container:
+    build: .
+    ports:
+      - "27017:27017"
+
