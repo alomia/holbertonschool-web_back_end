@@ -1,2 +1,2 @@
 // All documents
-db.shool.collection.find()
+db.posts.find()
