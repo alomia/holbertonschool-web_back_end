@@ -1,4 +1,5 @@
-// Let's make some classrooms
+// Let's make some
+
 import ClassRoom from "./0-classroom.js";
 
 const room1 = new ClassRoom(19);
