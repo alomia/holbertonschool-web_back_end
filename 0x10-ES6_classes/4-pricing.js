@@ -1,16 +1,35 @@
-export default class Building {
-  constructor(sqft) {
-    if (this.constructor !== Building && typeof this.evacuationWarningMessage === 'undefined') throw new Error('Class extending Building must override evacuationWarningMessage');
-    this._sqft = sqft;
+export default class Pricing {
+  constructor(amount, currency) {
+    this._amount = amount;
+    this._currency = currency;
   }
 
-  /* getter sqft */
-  get sqft() {
-    return this._sqft;
+  /* getter amount */
+  get amount() {
+    return this._amount;
   }
 
-  /* setter sqft */
-  set sqft(value) {
-    this._sqft = value;
+  /* setter amount */
+  set amount(value) {
+    this._amount = value;
+  }
+
+  /* getter currency */
+  get currency() {
+    return this._currency;
+  }
+
+  /* setter currency */
+  set currency(value) {
+    this._currency = value;
+  }
+
+  displayFullPrice() {
+    const currencyAll = this._currency.displayFullCurrency();
+    return `${this._amount} ${currencyAll}`;
+  }
+
+  static convertPrice(amount, conversionRate) {
+    return amount * conversionRate;
   }
 }
