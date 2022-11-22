@@ -1,11 +1,11 @@
 export default function getListStudentIds(arrObjct) {
-  let idsList = [];
-
   if (typeof arrObjct == 'object') {
-    arrObjct.map((obj) => {
-      idsList.push(obj['id']);
+    const idsList = arrObjct.map((obj) => {
+      return obj['id'];
     });
+
+    return idsList;
   }
 
-  return idsList;
+  return []
 }
