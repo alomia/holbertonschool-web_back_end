@@ -1,9 +1,10 @@
-const process = require("process");
+process.stdout.write('Welcome to Holberton School, what is your name?\n');
 
-let name;
+process.stdin.on('readable', () => {
+  const input = process.stdin.read();
+  if (input !== null) process.stdout.write(`Your name is: ${input}`);
+});
 
-console.log("Welcome to Holberton School, what is your name?");
-
-process.stdin.on('data', (name) => {
-  console.log(`Your name is: Bob ${name}`);
+process.stdin.on('end', () => {
+  process.stdout.write('This important software is now closing\n');
 });
